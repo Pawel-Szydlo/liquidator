@@ -30,7 +30,7 @@ const main = async () => {
   await sellLoop(wallet, connection)
   if (!insideCI) {
     setInterval(() => sellLoop(wallet, connection), SCAN_INTERVAL)
-    await sleep(SCAN_INTERVAL)
+    await sleep(SCAN_INTERVAL / 2)
   } else {
     process.exit()
   }

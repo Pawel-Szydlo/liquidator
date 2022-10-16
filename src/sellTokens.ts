@@ -28,7 +28,7 @@ export const sellLoop = async (wallet: Keypair, connection: Connection) => {
         )
       ).json()
       const routes = data
-      if (routes) {
+      if (routes && routes[0]) {
         // 2_000_000 = 2$
         if (routes[0].outAmount > 2_000_000 && routes[0].priceImpactPct * 100 < 0.5) {
           routesTx.push(routes[0])
