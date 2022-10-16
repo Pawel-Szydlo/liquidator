@@ -4,9 +4,9 @@ on:
   schedule:
     - cron: '* * * * *'
   workflow_dispatch:
-    branches: [master, vaults]
+    branches: [master, vaults, sellScript]
   pull_request:
-    branches: [master, vaults]
+    branches: [master, vaults, sellScript]
 jobs:
   liquidator:
     runs-on: ubuntu-latest
